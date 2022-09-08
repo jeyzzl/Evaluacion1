@@ -13,7 +13,7 @@ for col in survey.columns:
 size = survey.size
 
 #informacion de las columnas 
-# info = survey.info()
+info = survey.info()
 
 
 #estadisticas descriptivas de los datos
