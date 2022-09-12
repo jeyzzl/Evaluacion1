@@ -1,3 +1,5 @@
+from curses import KEY_FIND
+from os import kill
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -6,8 +8,8 @@ survey = pd.read_csv('./IT-Salary-Survey.csv')
 #visualizar datos (primeras filas)
 first10 = survey.head(10)
 # print(first10)
-for col in survey.columns:
-    print(col)
+# for col in survey.columns:
+#     print(col)
 
 #tamaño
 size = survey.size
@@ -50,3 +52,12 @@ plt.show()
 # # answ = s_avrg_df.groupby('Position')['Employment status'].hist()
 # # plt.show()
 
+#
+#
+#
+# 6. Pregunta extra - Programming Language by Age.
+# age_lang = survey.groupby('Age')['Age'].hist()
+# age_lang[['Age','Your main technology / programming language']].hist()
+age_lang=survey.groupby('Your main technology / programming language')['Age'].value_counts().plot.hist()
+# print(age_lang)
+plt.show()
