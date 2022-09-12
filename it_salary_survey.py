@@ -56,8 +56,6 @@ plt.show()
 #
 #
 # 6. Pregunta extra - Programming Language by Age.
-# age_lang = survey.groupby('Age')['Age'].hist()
-# age_lang[['Age','Your main technology / programming language']].hist()
 age_lang=survey.groupby('Your main technology / programming language')['Age'].value_counts().plot.hist()
 # print(age_lang)
 plt.show()
